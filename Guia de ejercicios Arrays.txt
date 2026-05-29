@@ -1,0 +1,114 @@
+1-
+
+int[] b = { 11, 31, 52, 32, 65, 76, 77, 90, 67, 42, 54, 65 };
+int[] a = { 1, 3, 5, 7, 9, 2, 41, 5, 4, 6, 7, 8};
+
+for (int i = 1; i < 13; i++)
+{
+    if (a[i] %2==0)
+    {
+        Console.WriteLine(a[i]);
+    }
+    if (b[i] % 2 != 0)
+    {
+        Console.WriteLine(b[i]);
+    }
+}
+
+
+
+2-
+
+int d = 5; 
+int[] a = new int[d];
+int[] b = new int[d]; 
+int[] productoDeArrays = new int[d]; 
+int cont = 0; 
+Console.WriteLine("Llene los siguientes arrays. a:");
+for (cont=0; cont < d; cont++) 
+{
+ a[cont] = Convert.ToInt32(Console.ReadLine()); 
+} 
+Console.WriteLine("Llene los siguientes arrays. b:"); 
+for (cont = 0; cont < d; cont++) 
+{ 
+b[cont] = Convert.ToInt32(Console.ReadLine()); 
+} 
+for (cont = 0; cont < d; cont++) 
+{ 
+productoDeArrays[cont] = a[cont] * b[d-(cont+1)]; 
+} 
+for (cont = 0; cont < d; cont++) 
+{
+Console.WriteLine(productoDeArrays[cont]); 
+}
+
+
+
+3-
+
+int d = 5;
+int[] a = new int[d];
+int[] z = new int[d];
+int cont = 0;
+Console.WriteLine("Llene los siguientes arrays:");
+for (cont = 0; cont < d; cont++)
+{
+    a[cont] = Convert.ToInt32(Console.ReadLine());
+   
+}
+for (cont = a.Length - 1; cont > -1; cont--)
+{
+    int f;
+    f = (a.Length-1) - cont;
+    z[f] = a[cont];
+
+    Console.WriteLine(z[f]);
+}
+
+
+
+4-
+
+int d = 5;
+double[] a = new double[d];
+double[] api = new double[d];
+int cont;
+Console.WriteLine("Llene los siguientes arrays:");
+for (cont = 0; cont < d; cont++)
+{
+    a[cont] = Convert.ToInt32(Console.ReadLine());
+   
+}
+for (cont =0; cont<5; cont++)
+{
+    api[cont] = a[cont] * 3.14159265;
+
+    Console.WriteLine(api[cont]);
+}
+
+
+
+5-
+
+int d = 5;
+int[] lineal = new int[d];
+int cont;
+int pos=-1;
+int buscado;
+Console.WriteLine("ingrese el numero que desea buscar:");
+buscado= Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Llene los siguientes arrays:");
+for (cont = 0; cont < d; cont++)
+{
+    lineal[cont] = Convert.ToInt32(Console.ReadLine());
+   
+}
+for (cont =0; cont<5; cont++)
+{
+    if (lineal[cont]==buscado)
+    {}
+
+        pos = cont+1;
+    }
+Console.WriteLine($"El numero buscado se encuentra en la posicion numero: {pos}");
